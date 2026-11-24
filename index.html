@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#000000">
+<meta name="description" content="Kostenlose Web-Apps für den Sportunterricht: ohne Konto, ohne Tracking, auch ohne Internet.">
+<title>Tools für Sport &amp; Schule</title>
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="icon" href="icons/icon-192.png">
+<link rel="apple-touch-icon" href="icons/apple-touch-icon.png">
+<link rel="stylesheet" href="site.css">
+</head>
+<body>
+<div class="wrap">
+  <h1>Tools für <span>Sport &amp; Schule</span></h1>
+  <p class="lead">Kostenlose Web-Apps für die Halle und den Klassenraum. Antippen und loslegen.</p>
+
+  <nav class="tiles" aria-label="Apps">
+    <a class="tile" href="/sport-delay/">
+      <span class="ico" aria-hidden="true">🎥</span>
+      <span><b>Sport-Delay</b><small>Bewegung zeitversetzt sehen, mit Slow-Mo und Bild für Bild.</small></span>
+    </a>
+    <a class="tile" href="/teams/">
+      <span class="ico" aria-hidden="true">👥</span>
+      <span><b>Teams-Generator</b><small>Faire Teams aus der Klassenliste, in Sekunden.</small></span>
+    </a>
+    <a class="tile" href="/bewegungsrad/">
+      <span class="ico" aria-hidden="true">🎡</span>
+      <span><b>Bewegungsrad</b><small>Glücksrad für Bewegungspausen mit Countdown.</small></span>
+    </a>
+  </nav>
+
+  <div class="box">
+    <ul class="ok">
+      <li>Kein Konto, keine Anmeldung</li>
+      <li>Kein Tracking, keine Werbung</li>
+      <li>Daten bleiben auf deinem Gerät</li>
+      <li>Läuft auf iPad und Android, nach dem ersten Öffnen auch ohne Internet</li>
+    </ul>
+  </div>
+
+</div>
+<script>
+  if ('serviceWorker' in navigator && window.isSecureContext) {
+    navigator.serviceWorker.register('/sw.js', { scope: '/' }).catch(() => {});
+  }
+</script>
+</body>
+</html>
